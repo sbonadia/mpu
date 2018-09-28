@@ -32,7 +32,7 @@ function createProgram(gl, vertexShader, fragmentShader) {
 
 function main() {
   // Get A WebGL context
-  var canvas = document.getElementById("c");
+  var canvas = document.getElementById("viewport");
   var gl = canvas.getContext("webgl");
   if (!gl) {
     return;
