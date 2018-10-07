@@ -9,14 +9,15 @@
 }(this, function(){
     "use script";
     var topWindow = this;
+    
 
     function isInIFrame(w){
         w = w || topWindow;
         return w !== w.top;
     }
     if (!isInIFrame()) {
-        console.log("%c%s", 'color:blue;font-weight:bold;', 'for more about webgl-utils.js see:');  // eslint-disable-line
-        console.log("%c%s", 'color:blue;font-weight:bold;', 'http://webglfundamentals.org/webgl/lessons/webgl-boilerplate.html');  // eslint-disable-line
+        //console.log("%c%s", 'color:blue;font-weight:bold;', 'for more about webgl-utils.js see:');  // eslint-disable-line
+        //console.log("%c%s", 'color:blue;font-weight:bold;', 'http://webglfundamentals.org/webgl/lessons/webgl-boilerplate.html');  // eslint-disable-line
     }
     function error(msg) {
         if (topWindow.console) {
@@ -84,11 +85,14 @@
         }
         return false;
     }
+    
+    
     return {
         compilerShader: compilerShader,
         createProgram: createProgram,
         createShaderFromScript: createShaderFromScript,
         createProgramFromScripts: createProgramFromScripts,
         resizeCanvasToDisplaySize:resizeCanvasToDisplaySize,
+        
     };
 }));
